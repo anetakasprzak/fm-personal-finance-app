@@ -2,27 +2,27 @@
   "nav": [
     {
       "id": 1,
-      "image": "./assets/images/icon-nav-overview.svg",
+      "image": "/static/images/icon-nav-overview.svg",
       "text": "Overview"
     },
     {
       "id": 2,
-      "image": "./assets/images/icon-nav-transactions.svg",
+      "image": "/static/images/icon-nav-transactions.svg",
       "text": "Transactions"
     },
     {
       "id": 3,
-      "image": "./assets/images/icon-nav-budgets.svg",
+      "image": "/static/images/icon-nav-budgets.svg",
       "text": "Budgets"
     },
     {
       "id": 4,
-      "image": "./assets/images/icon-nav-pots.svg",
+      "image": "/static/images/icon-nav-pots.svg",
       "text": "Pots"
     },
     {
       "id": 5,
-      "image": "./assets/images/icon-nav-recurring-bills.svg",
+      "image": "/static/images/icon-nav-recurring-bills.svg",
       "text": "Recurring bills"
     }
   ],
