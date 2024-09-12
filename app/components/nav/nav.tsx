@@ -1,15 +1,16 @@
 import Image from "next/image";
 import data from "../../data/data.json";
+import { NavContainer, NavText } from "./nav.styled";
 
 export default function Nav() {
   return (
-    <ul>
+    <NavContainer>
       {data.nav.map((nav) => (
         <li key={nav.id}>
-          <Image src={nav.image} alt="nav icon" width={50} height={50} />
-          <p>{nav.text}</p>
+          <Image src={nav.image} alt="nav icon" width={24} height={24} />
+          <NavText>{nav.text}</NavText>
         </li>
       ))}
-    </ul>
+    </NavContainer>
   );
 }
