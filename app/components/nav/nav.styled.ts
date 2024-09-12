@@ -2,11 +2,12 @@ import styled from "styled-components";
 import Image from "next/image";
 
 export const NavContainer = styled.ul`
-  background-color: #201f24;
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: space-between;
+  background-color: #201f24;
+  width: 100%;
+
   align-self: flex-end;
   padding: 0.8rem 1.6rem 0.8rem 1.6rem;
   border-radius: 0.8rem 0.8rem 0rem 0rem;
@@ -23,10 +24,16 @@ export const NavContainer = styled.ul`
     flex-direction: column;
     align-self: flex-start;
     align-items: flex-start;
-    width: 28rem;
+    width: 25rem;
+    padding: 5rem 0rem 5rem 3rem;
     height: 100%;
     order: 1;
     border-radius: 0rem 1.6rem 1.6rem 0rem;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 93rem) {
+    width: 30rem;
   }
 `;
 
@@ -35,6 +42,19 @@ export const Logo = styled(Image)`
 
   @media screen and (min-width: 69rem) {
     display: block;
+    margin-bottom: 4rem;
+  }
+`;
+
+export const NavFlexWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  @media screen and (min-width: 69rem) {
+    flex-direction: column;
+    gap: 3rem;
   }
 `;
 
