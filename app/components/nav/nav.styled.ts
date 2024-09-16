@@ -90,17 +90,24 @@ export const NavText = styled.p`
 
 export const CloseMenuBox = styled.div`
   display: none;
+  color: #b3b3b3;
+  font-size: 1.6rem;
+  font-weight: 700;
+  transition: all 0.2s;
 
   @media screen and (min-width: 69rem) {
     display: block;
     display: flex;
     align-items: center;
     gap: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      color: #f2f2f2;
+      fill: #f2f2f2;
+      stroke: #f2f2f2;
+    }
   }
 `;
 
-export const CloseMenuText = styled.p`
-  color: #b3b3b3;
-  font-size: 1.6rem;
-  font-weight: 700;
-`;
+export const CloseMenuText = styled.p``;
