@@ -64,20 +64,29 @@ export const NavEl = styled.li`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 150%;
+  cursor: pointer;
+  transition: all 0.2s;
 
   @media screen and (min-width: 69rem) {
     flex-direction: row;
     justify-content: flex-start;
     gap: 2rem;
+
+    &:hover {
+      color: #f2f2f2;
+      svg path {
+        fill: #f2f2f2;
+      }
+    }
   }
 `;
 
 export const NavText = styled.p`
   display: none;
-  color: #b3b3b3;
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 150%;
 
   @media screen and (min-width: 35rem) {
     display: block;
@@ -90,22 +99,27 @@ export const NavText = styled.p`
 
 export const CloseMenuBox = styled.div`
   display: none;
-  color: #b3b3b3;
   font-size: 1.6rem;
   font-weight: 700;
   transition: all 0.2s;
 
+  svg {
+    fill: red;
+  }
+
   @media screen and (min-width: 69rem) {
     display: block;
     display: flex;
+    color: #b3b3b3;
     align-items: center;
     gap: 2rem;
     cursor: pointer;
 
     &:hover {
       color: #f2f2f2;
-      fill: #f2f2f2;
-      stroke: #f2f2f2;
+      svg path {
+        fill: #f2f2f2;
+      }
     }
   }
 `;
