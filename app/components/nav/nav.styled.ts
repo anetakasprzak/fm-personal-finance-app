@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/link";
 
 export const NavContainer = styled.ul`
   display: flex;
@@ -58,7 +59,7 @@ export const NavFlexWrapper = styled.div`
   }
 `;
 
-export const NavEl = styled.li`
+export const NavEl = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: center;

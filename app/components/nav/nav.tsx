@@ -1,3 +1,4 @@
+"use client";
 import {
   NavContainer,
   NavText,
@@ -23,7 +24,8 @@ export default function Nav() {
               width={121}
               height={21}
             />
-            <NavEl>
+
+            <NavEl href="/">
               <svg
                 fill="none"
                 height="19"
@@ -38,7 +40,7 @@ export default function Nav() {
               </svg>
               <NavText>Overview</NavText>
             </NavEl>
-            <NavEl>
+            <NavEl href="/transactions">
               <svg
                 fill="none"
                 height="18"
@@ -53,7 +55,7 @@ export default function Nav() {
               </svg>
               <NavText>Transactions</NavText>
             </NavEl>
-            <NavEl>
+            <NavEl href="/budgets">
               <svg
                 fill="none"
                 height="20"
@@ -68,7 +70,7 @@ export default function Nav() {
               </svg>
               <NavText>Budgets</NavText>
             </NavEl>
-            <NavEl>
+            <NavEl href="/pots">
               <svg
                 fill="none"
                 height="22"
@@ -83,7 +85,7 @@ export default function Nav() {
               </svg>{" "}
               <NavText>Pots</NavText>
             </NavEl>
-            <NavEl>
+            <NavEl href="/recurring-bills">
               <svg
                 fill="none"
                 height="17"

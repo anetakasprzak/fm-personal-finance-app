@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Nav from "./components/nav/nav";
 
 const publicSans = localFont({
   src: "./assets/fonts/PublicSans-VariableFont_wght.ttf",
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${publicSans.variable} `}>{children}</body>
+      <body className={`${publicSans.variable} `}>
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }
