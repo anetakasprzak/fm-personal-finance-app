@@ -3,5 +3,5 @@
 import { Container } from "./page.styled";
 
 export default function Home() {
-  return <Container></Container>;
+  return <div></div>;
 }

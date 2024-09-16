@@ -31,6 +31,7 @@ export const NavContainer = styled.ul`
     order: 1;
     border-radius: 0rem 1.6rem 1.6rem 0rem;
     justify-content: space-between;
+    height: 100vh;
   }
 
   @media screen and (min-width: 93rem) {
