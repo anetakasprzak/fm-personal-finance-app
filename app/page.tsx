@@ -1,7 +1,3 @@
-"use client";
-
-import { Container } from "./page.styled";
-
 export default function Home() {
-  return <div></div>;
+  return <div>hello main page</div>;
 }

@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "./components/nav/nav";
-import { Container } from "./page.styled";
+import { StyledComponentsRegistry } from "./lib";
+
+import { ChildrenContainer, Container, NavContainer } from "./page.styled";
 
 const publicSans = localFont({
   src: "./assets/fonts/PublicSans-VariableFont_wght.ttf",
@@ -23,10 +25,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${publicSans.variable} `}>
-        <div style={{ display: "flex" }}>
-          <Nav />
-          {children}
-        </div>
+        <StyledComponentsRegistry>
+          <Container>
+            <NavContainer>
+              <Nav />
+            </NavContainer>
+            <ChildrenContainer>{children}</ChildrenContainer>
+          </Container>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
