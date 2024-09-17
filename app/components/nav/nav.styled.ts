@@ -60,13 +60,14 @@ export const NavFlexWrapper = styled.div`
   }
 `;
 
-export const NavEl = styled(Link)`
+export const NavEl = styled<{ isActive: boolean }>(Link)`
+  background-color: ${(props) => (props.isActive ? "#F8F4F0" : "")};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  color: #b3b3b3;
+  color: ${(props) => (props.isActive ? "#201F24" : "#b3b3b3")};
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 150%;

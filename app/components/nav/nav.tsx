@@ -1,4 +1,5 @@
 "use client";
+import { usePathname } from "next/navigation";
 import {
   NavContainer,
   NavText,
@@ -11,6 +12,7 @@ import {
 import { useState } from "react";
 
 export default function Nav() {
+  const currentPath = usePathname();
   const [isNavOpen, setIsNavOpen] = useState(true);
 
   return (
@@ -25,7 +27,7 @@ export default function Nav() {
               height={21}
             />
 
-            <NavEl href="/">
+            <NavEl href="/" isActive={currentPath === "/"}>
               <svg
                 fill="none"
                 height="19"
@@ -40,7 +42,10 @@ export default function Nav() {
               </svg>
               <NavText>Overview</NavText>
             </NavEl>
-            <NavEl href="/transactions">
+            <NavEl
+              href="/transactions"
+              isActive={currentPath === "/transactions"}
+            >
               <svg
                 fill="none"
                 height="18"
@@ -55,7 +60,7 @@ export default function Nav() {
               </svg>
               <NavText>Transactions</NavText>
             </NavEl>
-            <NavEl href="/budgets">
+            <NavEl href="/budgets" isActive={currentPath === "/budgets"}>
               <svg
                 fill="none"
                 height="20"
@@ -70,7 +75,7 @@ export default function Nav() {
               </svg>
               <NavText>Budgets</NavText>
             </NavEl>
-            <NavEl href="/pots">
+            <NavEl href="/pots" isActive={currentPath === "/pots"}>
               <svg
                 fill="none"
                 height="22"
@@ -85,7 +90,10 @@ export default function Nav() {
               </svg>{" "}
               <NavText>Pots</NavText>
             </NavEl>
-            <NavEl href="/recurring-bills">
+            <NavEl
+              href="/recurring-bills"
+              isActive={currentPath === "/recurring-bills"}
+            >
               <svg
                 fill="none"
                 height="17"
