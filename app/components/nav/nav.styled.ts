@@ -60,7 +60,7 @@ export const NavFlexWrapper = styled.div`
   }
 `;
 
-export const NavEl = styled<{ isActive: boolean }>(Link)`
+export const NavEl = styled(Link)<{ isActive: boolean }>`
   background-color: ${(props) => (props.isActive ? "#F8F4F0" : "")};
   display: flex;
   flex-direction: column;
