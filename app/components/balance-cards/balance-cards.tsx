@@ -20,9 +20,11 @@ function BalanceCards({ balance }: BalanceCardsProps) {
 
   return (
     <BalanceCardsBox>
-      <BalanceCard>
-        <CardText>Current Balance</CardText>
-        <CardAmount>{UKCurrency.format(balance.current)}</CardAmount>
+      <BalanceCard style={{ backgroundColor: "#201F24" }}>
+        <CardText style={{ color: "#fff" }}>Current Balance</CardText>
+        <CardAmount style={{ color: "#fff" }}>
+          {UKCurrency.format(balance.current)}
+        </CardAmount>
       </BalanceCard>
 
       <BalanceCard>

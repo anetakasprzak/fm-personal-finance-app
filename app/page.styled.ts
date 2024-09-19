@@ -17,4 +17,7 @@ export const NavContainer = styled.div`
 
 export const ChildrenContainer = styled.div`
   flex: 0 1 auto;
+  background-color: #f8f4f0;
+  padding: 2.4rem 1.6rem;
+  justify-content: center;
 `;
