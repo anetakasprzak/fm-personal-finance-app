@@ -5,11 +5,16 @@ type BalanceCardsProps = {
 };
 
 function BalanceCards({ balance }: BalanceCardsProps) {
+  const UKCurrency = new Intl.NumberFormat("en-UK", {
+    style: "currency",
+    currency: "GBP",
+  });
+
   return (
     <>
-      <p>{balance.current}</p>
-      <p>{balance.income}</p>
-      <p>{balance.expenses}</p>
+      <p>{UKCurrency.format(balance.current)}</p>
+      <p>{UKCurrency.format(balance.income)}</p>
+      <p>{UKCurrency.format(balance.expenses)}</p>
     </>
   );
 }
