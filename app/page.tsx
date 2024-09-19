@@ -1,3 +1,6 @@
+import data from "./data/data.json";
+import BalanceCards from "./components/balance-cards/balance-cards";
+
 export default function Home() {
-  return <div>hello main page</div>;
+  return <BalanceCards balance={data.balance} />;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 function PotsPage() {
-  return <div style={{ backgroundColor: "blue" }}>PotsPage</div>;
+  return <div>PotsPage</div>;
 }
 
 export default PotsPage;
