@@ -6,6 +6,17 @@ export const BalanceCardsBox = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
+  ///////////// PUSH IT!!!!!!
+
+  @media screen and (min-width: 42rem) {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  @media screen and (min-width: 50rem) {
+    gap: 2.4rem;
+  }
 `;
 
 export const BalanceCard = styled.div`
@@ -13,6 +24,14 @@ export const BalanceCard = styled.div`
   padding: 2rem;
   border-radius: 1.2rem;
   width: clamp(20rem, 98%, 42rem);
+
+  @media screen and (min-width: 42rem) {
+    padding: 2.4rem;
+  }
+
+  @media screen and (min-width: 50rem) {
+    width: clamp(30rem, 98%, 34rem);
+  }
 `;
 
 export const CardText = styled.p`

@@ -16,8 +16,12 @@ export const NavContainer = styled.div`
 `;
 
 export const ChildrenContainer = styled.div`
-  flex: 0 1 auto;
+  flex: 0 1 100%;
   background-color: #f8f4f0;
   padding: 2.4rem 1.6rem;
   justify-content: center;
+
+  @media screen and (min-width: 50rem) {
+    padding: 3.2rem 4rem;
+  }
 `;
