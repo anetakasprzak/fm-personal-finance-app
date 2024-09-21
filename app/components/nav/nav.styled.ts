@@ -45,6 +45,7 @@ export const Logo = styled(Image)`
   @media screen and (min-width: 69rem) {
     display: block;
     margin-bottom: 4rem;
+    margin-left: 2.4rem;
   }
 `;
 
@@ -138,6 +139,7 @@ export const CloseMenuBox = styled.div`
     align-items: center;
     gap: 2rem;
     cursor: pointer;
+    margin-left: 2.4rem;
 
     &:hover {
       color: #f2f2f2;
