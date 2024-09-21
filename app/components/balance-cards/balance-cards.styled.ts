@@ -7,8 +7,6 @@ export const BalanceCardsBox = styled.div`
   align-items: center;
   gap: 1rem;
 
-  ///////////// PUSH IT!!!!!!
-
   @media screen and (min-width: 42rem) {
     flex-direction: row;
     gap: 2rem;
