@@ -10,7 +10,7 @@ export const NavContainer = styled.ul`
   width: 100%;
 
   align-self: flex-end;
-  padding: 0.8rem 1.6rem 0.8rem 1.6rem;
+  padding: 0.8rem 2rem 0rem 2rem;
   border-radius: 0.8rem 0.8rem 0rem 0rem;
 
   @media screen and (min-width: 29rem) {
@@ -71,8 +71,16 @@ export const NavEl = styled(Link)<{ isActive: boolean }>`
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 150%;
+  padding: 0.8rem 1.6rem 0.8rem 1.6rem;
+  border-bottom: 4px solid transparent;
+  border-radius: 0.8rem 0.8rem 0 0;
+  border-bottom: ${(props) => (props.isActive ? "4px solid #277C78" : "")};
   cursor: pointer;
   transition: all 0.2s;
+
+  svg path {
+    fill: ${(props) => (props.isActive ? "#277C78" : "")};
+  }
 
   @media screen and (min-width: 69rem) {
     flex-direction: row;
