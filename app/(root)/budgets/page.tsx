@@ -1,7 +1,14 @@
+"use client";
+
+import { Heading } from "@/app/components/heading/heading.styled";
 import React from "react";
 
 function BudgetsPage() {
-  return <div>BudgetsPage</div>;
+  return (
+    <>
+      <Heading>Budgets</Heading>
+    </>
+  );
 }
 
 export default BudgetsPage;
