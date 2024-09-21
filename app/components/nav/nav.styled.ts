@@ -14,11 +14,11 @@ export const NavContainer = styled.ul`
   border-radius: 0.8rem 0.8rem 0rem 0rem;
 
   @media screen and (min-width: 29rem) {
-    padding: 0.8rem 2.8rem 0.8rem 2.8rem;
+    padding: 0.8rem 2.8rem 0rem 2.8rem;
   }
 
   @media screen and (min-width: 35rem) {
-    padding: 1rem 4rem 0.8rem 4rem;
+    padding: 1rem 4rem 0rem 4rem;
   }
 
   @media screen and (min-width: 69rem) {
@@ -26,12 +26,12 @@ export const NavContainer = styled.ul`
     align-self: flex-start;
     align-items: flex-start;
     width: 25rem;
-    padding: 5rem 0rem 5rem 3rem;
     height: 100%;
     order: 1;
     border-radius: 0rem 1.6rem 1.6rem 0rem;
     justify-content: space-between;
     height: 100vh;
+    padding: 4rem 2.8rem 8rem 0;
   }
 
   @media screen and (min-width: 93rem) {
@@ -56,7 +56,7 @@ export const NavFlexWrapper = styled.div`
 
   @media screen and (min-width: 69rem) {
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
   }
 `;
 
@@ -82,15 +82,28 @@ export const NavEl = styled(Link)<{ isActive: boolean }>`
     fill: ${(props) => (props.isActive ? "#277C78" : "")};
   }
 
+  @media screen and (min-width: 29rem) {
+    padding: 0.8rem 1.8rem 1rem 1.8rem;
+  }
+
   @media screen and (min-width: 69rem) {
+    border-bottom: 0;
     flex-direction: row;
     justify-content: flex-start;
     gap: 2rem;
 
+    padding: 1.6rem 1.6rem 1.6rem 2rem;
+
+    border-left: 4px solid transparent;
+    border-left: ${(props) => (props.isActive ? "4px solid #277C78" : "")};
+
+    border-radius: 0 1.2rem 1.2rem 0;
+
     &:hover {
-      color: #f2f2f2;
+      color: ${(props) => (props.isActive ? "" : "#f2f2f2")};
+
       svg path {
-        fill: #f2f2f2;
+        fill: ${(props) => (props.isActive ? "#277C78" : "")};
       }
     }
   }
