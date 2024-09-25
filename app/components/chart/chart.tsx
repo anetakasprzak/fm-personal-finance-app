@@ -1,6 +1,7 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
+import { ChartWrapper, InsideChart, Amount, Limit } from "./chart.styled";
 
 Chart.register(ArcElement, Tooltip, Legend);
 
@@ -33,28 +34,13 @@ const BudgetChart = () => {
   };
 
   return (
-    <div
-      style={{
-        position: "relative",
-        width: "240px",
-        height: "240px",
-        margin: "0 auto",
-      }}
-    >
+    <ChartWrapper>
       <Doughnut data={data} options={options} />
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          textAlign: "center",
-        }}
-      >
-        <h2 style={{ margin: 0 }}>$338</h2>
-        <p style={{ fontSize: "14px", color: "#555" }}>of $975 limit</p>
-      </div>
-    </div>
+      <InsideChart>
+        <Amount style={{ margin: 0 }}>£338</Amount>
+        <Limit style={{ fontSize: "14px", color: "#555" }}>of £975 limit</Limit>
+      </InsideChart>
+    </ChartWrapper>
   );
 };
 
