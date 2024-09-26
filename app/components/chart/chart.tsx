@@ -1,9 +1,16 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
-import { ChartWrapper, InsideChart, Amount, Limit } from "./chart.styled";
+import {
+  ChartWrapper,
+  InsideChart,
+  Amount,
+  Limit,
+  BudgetsBox,
+} from "./chart.styled";
 import { ChartLegend } from "../chart-legend.tsx/chart-legend";
 import { Budget } from "@/app/types";
+import SmallHeading from "../heading-small/heading-small";
 
 Chart.register(ArcElement, Tooltip, Legend);
 
@@ -37,9 +44,9 @@ const BudgetChart = ({ budgets }: { budgets: Budget[] }) => {
 
   return (
     <>
-      <div style={{ backgroundColor: "#fff" }}>
+      <BudgetsBox style={{ backgroundColor: "#fff" }}>
         <div>
-          <p>Budgets</p>
+          <SmallHeading>Budgets</SmallHeading>
           <p>See details</p>
         </div>
         <div>
@@ -54,7 +61,7 @@ const BudgetChart = ({ budgets }: { budgets: Budget[] }) => {
         <div>
           <ChartLegend budgets={budgets} />
         </div>
-      </div>
+      </BudgetsBox>
     </>
   );
 };

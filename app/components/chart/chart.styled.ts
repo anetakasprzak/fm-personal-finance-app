@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const BudgetsBox = styled.div`
+  background-color: #fff;
+`;
+
 export const ChartWrapper = styled.div`
   position: relative;
   width: 24rem;
