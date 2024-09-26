@@ -1,5 +1,10 @@
 import { Budget } from "@/app/types";
-import { BudgetEl } from "./chart-legend.styled";
+import {
+  LegendElement,
+  LegendBox,
+  LegendText,
+  LegendNumber,
+} from "./chart-legend.styled";
 
 type ChartLegendProps = {
   budgets: Budget[];
@@ -7,19 +12,19 @@ type ChartLegendProps = {
 
 export function ChartLegend({ budgets }: ChartLegendProps) {
   return (
-    <div>
+    <LegendBox>
       {budgets.map((budget) => (
         <LegendEl key={budget.category} budget={budget} />
       ))}
-    </div>
+    </LegendBox>
   );
 }
 
 export function LegendEl({ budget }: { budget: Budget }) {
   return (
-    <BudgetEl borderColor={budget.theme}>
-      <p>{budget.category}</p>
-      <p>{budget.maximum}</p>
-    </BudgetEl>
+    <LegendElement borderColor={budget.theme}>
+      <LegendText>{budget.category}</LegendText>
+      <LegendNumber>{budget.maximum}</LegendNumber>
+    </LegendElement>
   );
 }
