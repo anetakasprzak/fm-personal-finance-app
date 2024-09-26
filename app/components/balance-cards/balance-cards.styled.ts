@@ -6,6 +6,7 @@ export const BalanceCardsBox = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 3.2rem;
 
   @media screen and (min-width: 42rem) {
     flex-direction: row;

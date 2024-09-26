@@ -37,16 +37,24 @@ const BudgetChart = ({ budgets }: { budgets: Budget[] }) => {
 
   return (
     <>
-      <ChartWrapper>
-        <Doughnut data={data} options={options} />
-        <InsideChart>
-          <Amount style={{ margin: 0 }}>£338</Amount>
-          <Limit style={{ fontSize: "14px", color: "#555" }}>
-            of £975 limit
-          </Limit>
-        </InsideChart>
-      </ChartWrapper>
-      <ChartLegend budgets={budgets} />
+      <div style={{ backgroundColor: "#fff" }}>
+        <div>
+          <p>Budgets</p>
+          <p>See details</p>
+        </div>
+        <div>
+          <ChartWrapper>
+            <Doughnut data={data} options={options} />
+            <InsideChart>
+              <Amount>£338</Amount>
+              <Limit>of £975 limit</Limit>
+            </InsideChart>
+          </ChartWrapper>
+        </div>
+        <div>
+          <ChartLegend budgets={budgets} />
+        </div>
+      </div>
     </>
   );
 };

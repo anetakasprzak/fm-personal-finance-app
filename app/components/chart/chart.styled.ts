@@ -5,6 +5,8 @@ export const ChartWrapper = styled.div`
   width: 24rem;
   height: 24rem;
   margin: 0 auto;
+  background-color: #fff;
+  width: 100%;
 `;
 
 export const InsideChart = styled.div`
@@ -26,4 +28,6 @@ export const Amount = styled.span`
 
 export const Limit = styled.span`
   line-height: 150%;
+  font-size: 1.4rem;
+  color: #555;
 `;
