@@ -5,6 +5,12 @@ export const LegendBox = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.6rem;
+
+  @media screen and (min-width: 42em) {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    height: 22rem;
+  }
 `;
 
 export const LegendElement = styled.div<{
@@ -15,6 +21,11 @@ export const LegendElement = styled.div<{
   display: flex;
   flex-direction: column;
   padding-left: 1.2rem;
+
+  @media screen and (min-width: 42em) {
+    justify-content: center;
+    gap: 0.5rem;
+  }
 `;
 
 export const LegendText = styled.span`

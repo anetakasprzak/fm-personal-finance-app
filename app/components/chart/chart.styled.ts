@@ -8,6 +8,22 @@ export const ChartWrapper = styled.div`
   background-color: #fff;
   width: 100%;
   margin-bottom: 1.6rem;
+
+  @media screen and (min-width: 42em) {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+`;
+
+export const ChartLegendFlex = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 42em) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const InsideChart = styled.div`

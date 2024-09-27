@@ -4,6 +4,14 @@ export const ContainerBox = styled.div`
   background-color: #fff;
   border-radius: 1.2rem;
   padding: 2.4rem 2rem;
+
+  @media screen and (min-width: 35em) {
+    padding: 2.8rem;
+  }
+
+  @media screen and (min-width: 42em) {
+    padding: 3.2rem;
+  }
 `;
 
 export const HeadingLinkBox = styled.div`
