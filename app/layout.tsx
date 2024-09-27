@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "./components/nav/nav";
 import { StyledComponentsRegistry } from "./lib";
-
+import { Public_Sans } from "next/font/google";
 import { ChildrenContainer, Container, NavContainer } from "./page.styled";
 
-const publicSans = localFont({
-  src: "./assets/fonts/PublicSans-VariableFont_wght.ttf",
-  variable: "--font-public-sans",
-  weight: "100 900",
-});
+const publicSans = Public_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${publicSans.variable} `}>
+      <body className={publicSans.className}>
         <StyledComponentsRegistry>
           <Container>
             <NavContainer>

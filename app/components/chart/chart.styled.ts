@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-export const BudgetsBox = styled.div`
-  background-color: #fff;
-`;
-
 export const ChartWrapper = styled.div`
   position: relative;
   width: 24rem;
@@ -11,6 +7,7 @@ export const ChartWrapper = styled.div`
   margin: 0 auto;
   background-color: #fff;
   width: 100%;
+  margin-bottom: 1.6rem;
 `;
 
 export const InsideChart = styled.div`
