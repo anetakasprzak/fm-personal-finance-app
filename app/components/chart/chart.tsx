@@ -10,7 +10,8 @@ import {
 } from "./chart.styled";
 import { ChartLegend } from "../chart-legend.tsx/chart-legend";
 import { Budget } from "@/app/types";
-import SmallHeading from "../heading-small/heading-small";
+import SmallHeading from "../container/container";
+import Container from "../container/container";
 
 Chart.register(ArcElement, Tooltip, Legend);
 
@@ -44,11 +45,7 @@ const BudgetChart = ({ budgets }: { budgets: Budget[] }) => {
 
   return (
     <>
-      <BudgetsBox style={{ backgroundColor: "#fff" }}>
-        <div>
-          <SmallHeading>Budgets</SmallHeading>
-          <p>See details</p>
-        </div>
+      <Container heading="Budgets" linkText="See Details" href="/budgets">
         <div>
           <ChartWrapper>
             <Doughnut data={data} options={options} />
@@ -61,7 +58,7 @@ const BudgetChart = ({ budgets }: { budgets: Budget[] }) => {
         <div>
           <ChartLegend budgets={budgets} />
         </div>
-      </BudgetsBox>
+      </Container>
     </>
   );
 };
