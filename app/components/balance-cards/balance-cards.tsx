@@ -7,34 +7,30 @@ import {
   CardAmount,
   CardText,
 } from "./balance-cards.styled";
+import { formatCurrency } from "@/app/lib/utils";
 
 type BalanceCardsProps = {
   balance: Balance;
 };
 
 function BalanceCards({ balance }: BalanceCardsProps) {
-  const UKCurrency = new Intl.NumberFormat("en-UK", {
-    style: "currency",
-    currency: "GBP",
-  });
-
   return (
     <BalanceCardsBox>
       <BalanceCard style={{ backgroundColor: "#201F24" }}>
         <CardText style={{ color: "#fff" }}>Current Balance</CardText>
         <CardAmount style={{ color: "#fff" }}>
-          {UKCurrency.format(balance.current)}
+          {formatCurrency(balance.current)}
         </CardAmount>
       </BalanceCard>
 
       <BalanceCard>
         <CardText>Income</CardText>
-        <CardAmount>{UKCurrency.format(balance.income)}</CardAmount>
+        <CardAmount>{formatCurrency(balance.income)}</CardAmount>
       </BalanceCard>
 
       <BalanceCard>
         <CardText>Expenses</CardText>
-        <CardAmount>{UKCurrency.format(balance.expenses)}</CardAmount>
+        <CardAmount>{formatCurrency(balance.expenses)}</CardAmount>
       </BalanceCard>
     </BalanceCardsBox>
   );

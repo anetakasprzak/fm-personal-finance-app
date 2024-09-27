@@ -5,6 +5,7 @@ import {
   LegendText,
   LegendNumber,
 } from "./chart-legend.styled";
+import { formatCurrency } from "@/app/lib/utils";
 
 type ChartLegendProps = {
   budgets: Budget[];
@@ -24,7 +25,7 @@ export function LegendEl({ budget }: { budget: Budget }) {
   return (
     <LegendElement borderColor={budget.theme}>
       <LegendText>{budget.category}</LegendText>
-      <LegendNumber>{budget.maximum}</LegendNumber>
+      <LegendNumber>{formatCurrency(budget.maximum)}</LegendNumber>
     </LegendElement>
   );
 }

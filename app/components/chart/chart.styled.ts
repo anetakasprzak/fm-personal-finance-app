@@ -12,6 +12,7 @@ export const ChartWrapper = styled.div`
   @media screen and (min-width: 42em) {
     margin-top: 2rem;
     margin-bottom: 0;
+    width: auto;
   }
 `;
 
