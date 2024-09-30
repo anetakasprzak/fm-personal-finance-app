@@ -25,3 +25,19 @@ export const ChildrenContainer = styled.div`
     padding: 3.2rem 4rem;
   }
 `;
+
+export const ChartWrapper = styled.div`
+  position: relative;
+  width: 24rem;
+  height: 24rem;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 1.6rem;
+
+  @media screen and (min-width: 42em) {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    width: auto;
+  }
+`;
